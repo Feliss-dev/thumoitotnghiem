@@ -46,7 +46,7 @@ window.ENV = {
   // ===== HÌNH ẢNH SLIDESHOW =====
   // Phân cách bằng dấu | nếu cấu hình dạng chuỗi
   SLIDE_IMAGES: [
-    'images/HMT.png',
+    'images/HMT2.jpg',
   ],
   SLIDE_CAPTIONS: [
     "Lễ Tốt Nghiệp Trường Đại học Tài nguyên và Môi trường Hà Nội",
