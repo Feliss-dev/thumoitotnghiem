@@ -1,58 +1,79 @@
 /**
  * config.js — Chỉnh sửa file này để tùy chỉnh thư mời
- * (thay thế cho .env, tương thích hoàn toàn với Live Server)
+ * Chỉ cần sửa các giá trị bên dưới, không cần đụng vào index.html
  */
 window.ENV = {
 
   // ===== THÔNG TIN SINH VIÊN =====
-  GRAD_NAME:  "Hoàng Minh Thành",
-  GRAD_ID:    "22111060481",
-  FACULTY:    "Khoa Công nghệ thông tin",
-  MAJOR:      "Công nghệ thông tin",
-  DEGREE:     "Cử nhân",
-  STUDY_DURATION: "4 năm",
+  GRAD_NAME: "Nguyễn Lan Anh",
+  PORTRAIT_IMAGE: "images/portrait.png",
+
+  // ===== ẢNH NỀN TRANG TRÍ (nghiêng ở góc nền đỏ) =====
+  BG_CORNER_1: "images/bg-corner-1.jpg",
+  BG_CORNER_2: "images/bg-corner-2.jpg",
 
   // ===== THÔNG TIN TRƯỜNG =====
-  UNIVERSITY_NAME: "Trường Đại học Tài nguyên và Môi trường Hà Nội",
-  UNIVERSITY_SHORT: "HUNRE",
-  UNIVERSITY_TAGLINE: "HANOI UNIVERSITY OF NATURAL RESOURCES AND ENVIRONMENT",
+  UNIVERSITY_NAME_EN: "Foreign Trade University",
+  UNIVERSITY_NAME_VN: "Đại học Ngoại Thương",
+  UNIVERSITY_SHORT: "FTU",
 
-  // ===== THÔNG TIN LỄ TỐT NGHIỆP =====
-  CEREMONY_DATE:     "20/06/2026",
-  CEREMONY_TIME:     "08:00",
-  CEREMONY_DATE_ISO: "2026-06-20T08:00:00",
-  CEREMONY_LOCATION: "Hội trường lớn, Cơ sở 1",
-  CEREMONY_ADDRESS:  "41A đường Phú Diễn, Bắc Từ Liêm, Hà Nội",
+  // ===== THỜI GIAN & ĐỊA ĐIỂM =====
+  CEREMONY_WEEKDAY: "Chủ nhật",
+  CEREMONY_DATE: "20/09/2026",
+  CEREMONY_DATE_ISO: "2026-09-20T09:00:00",
+  CEREMONY_END_ISO: "2026-09-20T12:00:00",
+  CEREMONY_TIME_RANGE: "09h00 - 12h00",
+  CEREMONY_LOCATION: "Trung tâm Hội nghị Quốc gia",
+  CEREMONY_ADDRESS: "Đường Phạm Hùng, phường Từ Liêm, TP. Hà Nội, Việt Nam",
 
-  // ===== NGƯỜI NHẬN THƯ =====
-  RECIPIENT: "Bố Mẹ, Gia đình và Bạn bè",
+  // ===== LỜI NHẮN =====
+  INVITE_MESSAGE: "Sự hiện diện của bạn là niềm vui và kỷ niệm thật đẹp trong ngày đặc biệt này.",
+  CLOSING_MESSAGE: "Cảm ơn vì đã là một phần trong thanh xuân của tớ.",
 
-  // ===== CHƯƠNG TRÌNH LỄ =====
-  SCHEDULE_1_TIME: '07:00 - 07:05', SCHEDULE_1_DESC: 'Khai mạc lễ tốt nghiệp',
-  SCHEDULE_2_TIME: '07:05 - 07:10', SCHEDULE_2_DESC: 'Phát biểu chúc mừng của đại diện Lãnh đạo Trường ',
-  SCHEDULE_3_TIME: '07:10 - 07:15', SCHEDULE_3_DESC: 'Đại diện tân cử nhân phát biểu và tặng hoa',
-  SCHEDULE_4_TIME: '07:15 - 12:00', SCHEDULE_4_DESC: 'Nghi lễ trao bằng tốt nghiệp cho sinh viên - Chụp ảnh lưu niệm',
+  // ===== LƯU Ý =====
+  GIFT_NOTE: "Mình xin phép không nhận hoa và quà to vì sợ không vác về được, mong mọi người thông cảm nhé.",
+  PARKING_NOTE: "Trung tâm Hội nghị Quốc gia không có chỗ gửi xe, mọi người đi Grab hoặc gửi xe ở các điểm gần đó giúp mình nhé!",
 
-  // ===== LIÊN HỆ =====
-  CONTACT_EMAIL:   "thanhlta1234@gmail.com",
-  CONTACT_PHONE:   "0877.568.887",
-  CONTACT_WEBSITE: "https://github.com/Feliss-dev",
-  CONTACT_FACEBOOK: "https://www.facebook.com/minh.thanh.606973",
+  // ===== NÚT BẤM =====
+  // Để trống RSVP_URL để dùng xác nhận nhanh ngay trên trang (lưu trên trình duyệt).
+  // Điền link (Google Form, Zalo...) nếu muốn dẫn sang nơi khác khi bấm "Mình sẽ đến".
+  RSVP_URL: "",
+  MAP_QUERY: "Trung tâm Hội nghị Quốc gia, Phạm Hùng, Từ Liêm, Hà Nội",
 
-  // ===== ẢNH CHỈ ĐƯỜNG =====
-  // Upload ảnh vào folder images/, đổi tên file bên dưới (hoặc để trống nếu không có)
-  DIRECTION_IMAGE: "",
-
-  // ===== HÌNH ẢNH SLIDESHOW =====
-  // Phân cách bằng dấu | nếu cấu hình dạng chuỗi
-  SLIDE_IMAGES: [
-    'images/HMT2.jpg',
+  // ===== HÀNH TRÌNH (timeline) =====
+  TIMELINE: [
+    {
+      icon: "fa-door-open",
+      tag: "Năm nhất",
+      title: "Ngày đầu bước vào FTU",
+      desc: "Cô sinh viên năm nhất rụt rè bước qua cổng trường, mang theo bao nhiêu hoài bão và một chút lo lắng.",
+    },
+    {
+      icon: "fa-mug-hot",
+      tag: "Năm hai — ba",
+      title: "Những đêm deadline",
+      desc: "Những đêm thức trắng bên ly cà phê, deadline chồng deadline, nhưng chưa bao giờ chịu bỏ cuộc.",
+    },
+    {
+      icon: "fa-laptop",
+      tag: "Năm ba — tư",
+      title: "Những lần thuyết trình, thi cử",
+      desc: "Từ run rẩy trước lớp đến tự tin thuyết trình, từng kỳ thi đã tôi luyện nên một phiên bản trưởng thành hơn.",
+    },
+    {
+      icon: "fa-graduation-cap",
+      tag: "20/09/2026",
+      title: "Và cuối cùng — ngày tốt nghiệp",
+      desc: "Mọi nỗ lực đã được đền đáp. Đây là ngày để ăn mừng, và tớ rất muốn có bạn ở bên cạnh.",
+    },
   ],
-  SLIDE_CAPTIONS: [
-    "Lễ Tốt Nghiệp Trường Đại học Tài nguyên và Môi trường Hà Nội",
-    "Khoảnh Khắc Đáng Nhớ",
-    "Tương Lai Rộng Mở",
-    "Tri Thức & Khát Vọng",
-    "Hành Trình Mới Bắt Đầu",
+
+  // ===== GALLERY (thêm/bớt tuỳ ý, để src rỗng "" nếu chưa có ảnh) =====
+  GALLERY: [
+    { src: "images/gallery-1.jpg", caption: "Nắng chiều và tà áo cử nhân" },
+    { src: "images/gallery-2.jpg", caption: "Một góc tự hào" },
+    { src: "images/gallery-3.jpg", caption: "Khoảnh khắc ngồi lại" },
+    { src: "images/gallery-4.jpg", caption: "Ánh nhìn ngày đặc biệt" },
+    // { src: "images/gallery-5.jpg", caption: "Một chiều rực rỡ" },
   ],
 };
