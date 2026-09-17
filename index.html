@@ -415,28 +415,28 @@
   .reveal.visible{ opacity:1; transform:translateY(0); }
 
   /* =========================================================
-     TIMELINE
+     TIMELINE (tạm ẩn — bỏ comment để bật lại mục "Hành trình")
+     .timeline{ position:relative; max-width:600px; margin:0 auto; padding-left:38px; }
+     .timeline::before{
+       content:''; position:absolute; left:16px; top:6px; bottom:6px; width:2px;
+       background:linear-gradient(to bottom, var(--champagne-light), var(--champagne-deep));
+     }
+     .tl-item{ position:relative; padding-bottom:42px; }
+     .tl-item:last-child{ padding-bottom:0; }
+     .tl-dot{
+       position:absolute; left:-38px; top:0; width:36px; height:36px; border-radius:50%;
+       background:linear-gradient(135deg,var(--champagne-light),var(--champagne-deep));
+       display:flex; align-items:center; justify-content:center; color:var(--wine-deep);
+       font-size:1rem; box-shadow:0 4px 14px rgba(0,0,0,.35);
+     }
+     .tl-content{
+       background:rgba(74,13,33,0.55); border:1px solid rgba(232,197,131,0.25);
+       border-radius:16px; padding:16px 18px; backdrop-filter:blur(6px);
+     }
+     .tl-tag{ font-size:0.63rem; letter-spacing:2px; text-transform:uppercase; color:var(--champagne-light); font-weight:700; }
+     .tl-title{ font-family:'Playfair Display',serif; font-style:italic; font-size:1.05rem; color:var(--pearl); margin:4px 0 6px; }
+     .tl-desc{ font-size:0.84rem; color:var(--ink-soft); line-height:1.65; }
      ========================================================= */
-  .timeline{ position:relative; max-width:600px; margin:0 auto; padding-left:38px; }
-  .timeline::before{
-    content:''; position:absolute; left:16px; top:6px; bottom:6px; width:2px;
-    background:linear-gradient(to bottom, var(--champagne-light), var(--champagne-deep));
-  }
-  .tl-item{ position:relative; padding-bottom:42px; }
-  .tl-item:last-child{ padding-bottom:0; }
-  .tl-dot{
-    position:absolute; left:-38px; top:0; width:36px; height:36px; border-radius:50%;
-    background:linear-gradient(135deg,var(--champagne-light),var(--champagne-deep));
-    display:flex; align-items:center; justify-content:center; color:var(--wine-deep);
-    font-size:1rem; box-shadow:0 4px 14px rgba(0,0,0,.35);
-  }
-  .tl-content{
-    background:rgba(74,13,33,0.55); border:1px solid rgba(232,197,131,0.25);
-    border-radius:16px; padding:16px 18px; backdrop-filter:blur(6px);
-  }
-  .tl-tag{ font-size:0.63rem; letter-spacing:2px; text-transform:uppercase; color:var(--champagne-light); font-weight:700; }
-  .tl-title{ font-family:'Playfair Display',serif; font-style:italic; font-size:1.05rem; color:var(--pearl); margin:4px 0 6px; }
-  .tl-desc{ font-size:0.84rem; color:var(--ink-soft); line-height:1.65; }
 
   /* =========================================================
      COUNTDOWN
@@ -446,7 +446,7 @@
   .cd-num{
     font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(1.7rem,6vw,2.3rem);
     color:var(--wine-deep); background:linear-gradient(160deg,var(--pearl),var(--rose-soft));
-    border-radius:14px; width:74px; padding:14px 0; text-align:center;
+    border-radius:14px; width:clamp(56px,18vw,74px); padding:14px 0; text-align:center;
     box-shadow:0 10px 24px rgba(0,0,0,0.3); display:block;
   }
   .cd-num.flip{ animation:digitFlip 0.45s ease; }
@@ -459,7 +459,7 @@
      ========================================================= */
   .gallery-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:26px 20px; max-width:640px; margin:0 auto; padding:10px; }
   .polaroid{
-    background:var(--pearl); padding:9px 9px 30px; border-radius:4px;
+    background:var(--pearl); padding:9px 9px 16px; border-radius:4px;
     box-shadow:0 12px 26px rgba(0,0,0,0.4);
     transform:rotate(var(--rot,-3deg)); transition:transform 0.35s ease, box-shadow 0.35s ease;
   }
@@ -740,7 +740,7 @@
     </div>
   </main>
 
-  <!-- ===== TIMELINE ===== -->
+  <!-- ===== TIMELINE (tạm ẩn — bỏ comment để bật lại mục "Hành trình")
   <section class="section" id="timeline-section">
     <div class="sec-header reveal">
       <p class="sec-eyebrow"><i class="fa-solid fa-road"></i> Hành trình</p>
@@ -749,6 +749,7 @@
     </div>
     <div class="timeline" id="timeline"></div>
   </section>
+  ===== -->
 
   <!-- ===== COUNTDOWN ===== -->
   <section class="section" id="countdown-section">
@@ -1067,7 +1068,7 @@ function renderGallery(){
       ${item.src
         ? `<img class="pic" src="${item.src}" alt="${item.caption}" loading="lazy" />`
         : `<div class="pic-placeholder"><i class="fa-solid fa-image"></i><span>Thêm ảnh</span></div>`}
-      <p class="cap">${item.caption}</p>
+      <!-- <p class="cap">${item.caption}</p> -->
     </div>
   `).join('');
 }
